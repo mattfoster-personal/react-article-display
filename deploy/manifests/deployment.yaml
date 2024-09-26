@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react-application
-        image: localhost:5000/react-article-display:latest
+        image: registry.localhost:5000/react-article-display:latest
         ports:
           - containerPort: 80
         imagePullPolicy: Always
