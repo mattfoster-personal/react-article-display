@@ -2,7 +2,7 @@
 
 # Variables
 REPO_URL="http://localhost:3000/matt/react-article-display.git"
-DOCKER_IMAGE="localhost:5000/react-article-display:latest"
+DOCKER_IMAGE="registry.localhost:5000/react-article-display:latest"
 CLONE_DIR="/tmp/react-article-display"
 
 # Step 1: Clone the repository
