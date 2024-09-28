@@ -3,7 +3,7 @@ version: '1.0'
 on:
   push:
     branches:
-      - main  # Change this to your default branch
+      - main  # Or your default branch
 
 jobs:
   build:
@@ -12,10 +12,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Log in to Docker Registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      - name: Build and Push Docker Image
+      - name: Build Docker Image
         run: |
-          docker build -t your-docker-image-name:latest .
-          docker push your-docker-image-name:latest
+          docker build -t registry.localhost:5000/react-article-display:latest .
+
+      - name: Push Docker Image to Local Registry
+        run: |
+          docker push registry.localhost:5000/react-article-display:latest
