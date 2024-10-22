@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: react-application
-        image: registry.localhost:5000/react-article-display:matt
+        image: registry.localhost:5000/react-article-display:1.0.1 # {"$imagepolicy": "flux-system:react-app-policy"}
         ports:
           - containerPort: 80
         imagePullPolicy: Always
